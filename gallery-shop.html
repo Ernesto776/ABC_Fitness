@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC Fitness Studio | Gallery & Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation menu"
+      >
+        <svg
+          class="hamburger-icon"
+          viewBox="0 0 100 80"
+          width="30"
+          height="30"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect
+            class="line top"
+            width="100"
+            height="12"
+            rx="6"
+            fill="currentColor"
+          ></rect>
+          <rect
+            class="line middle"
+            y="30"
+            width="100"
+            height="12"
+            rx="6"
+            fill="currentColor"
+          ></rect>
+          <rect
+            class="line bottom"
+            y="60"
+            width="100"
+            height="12"
+            rx="6"
+            fill="currentColor"
+          ></rect>
+        </svg>
+      </button>
+
+      <nav id="primary-navigation" aria-label="Main Navigation">
+        <div class="logo-n-name">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_LogoPalette2_20458E.png"
+            class="logo"
+            alt="The ABC Fitness studio logo"
+          />
+          <h1><a href="index.html">ABC Fitness Studio</a></h1>
+        </div>
+        <ul>
+          <li><a href="index.html">Pricing</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="ourImpact.html">Our Impact</a></li>
+          <li><a href="gallery-shop.html" class="active">Shop</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="gallery-shop.html" class="btn btn-primary"
+          >Reserve a Session</a
+        >
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 style="text-align: center; margin-bottom: 2rem">
+        A display of our services
+      </h1>
+
+      <div class="gallery-grid">
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_GroupKickboxing.png"
+            alt="A woman wearing boxing gloves is in a fighting stance, preparing herself, looking off camera."
+          />
+          <p>
+            Kickbox in a group with our group kickboxing sessions. If your
+            reason is to workout, learn a new skill, or learn to defend yourself
+            this group kickboxing session is for you!
+          </p>
+          <div class="multi-users">
+            <div class="qty-controls">
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, -1)"
+                aria-label="Decrease quantity"
+              >
+                -
+              </button>
+              <span class="qty-val">1</span>
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, 1)"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="btn btn-primary add-to-cart-btn"
+              onclick="addToCart(this)"
+            >
+              Add people to session
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_GroupPilates.png"
+            alt="Three women are participating in group pilates. The women are on their yoga mats looking forward with both arms and right knees on the mat, their left leg is raised behind them in the air."
+          />
+          <p>
+            In this group pilates session, pilates sessions are given to help
+            improve health and fitness! Join now to see if you have what it
+            takes!
+          </p>
+          <div class="multi-users">
+            <div class="qty-controls">
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, -1)"
+                aria-label="Decrease quantity"
+              >
+                -
+              </button>
+              <span class="qty-val">1</span>
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, 1)"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="btn btn-primary add-to-cart-btn"
+              onclick="addToCart(this)"
+            >
+              Add people to session
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_GroupYoga.png"
+            alt="A group of people are sitting on their yoga mats with their arms over their heads and hands together."
+          />
+          <p>
+            Group yoga is the perfect way to achieve your zen! If your goals are
+            to relax and master your body, then group yoga is for you!
+          </p>
+          <div class="multi-users">
+            <div class="qty-controls">
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, -1)"
+                aria-label="Decrease quantity"
+              >
+                -
+              </button>
+              <span class="qty-val">1</span>
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, 1)"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="btn btn-primary add-to-cart-btn"
+              onclick="addToCart(this)"
+            >
+              Add people to session
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_IndividualKickboxing.png"
+            alt="The personal trainer is holding up the orange and black punching bag while the student throws a right sideways knee."
+          />
+          <p>
+            Group sessions arent for everyone, and you are not like everyone.
+            Push yourself past your limits with a one-on-one kickboxing training
+            session to be better than you were yesterday!
+          </p>
+          <button
+            class="btn btn-primary add-to-cart-btn"
+            onclick="addToCart(this)"
+          >
+            Reserve personal session
+          </button>
+        </article>
+
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_IndividualPilates.png"
+            alt="A woman is on her stomach doing trunk lifts with both of her arms extended out 90 degrees in front of her"
+          />
+          <p>
+            Reserve a personal pilates session! By choosing a solo session we
+            will dedicate our time to ensure you achieve your best flexibility,
+            posture, and core strength.
+          </p>
+          <button
+            class="btn btn-primary add-to-cart-btn"
+            onclick="addToCart(this)"
+          >
+            Reserve personal session
+          </button>
+        </article>
+
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_IndividualYoga.png"
+            alt="A woman is striking a downward dog pose on a cyan yoga mat!"
+          />
+          <p>
+            Reserve a personal session for yoga. With a personal session, we can
+            dedicate a trainers time to ensure you achieve balance, flexibilty,
+            muscle strength, and with the added benefit of reducing stress.
+          </p>
+          <button
+            class="btn btn-primary add-to-cart-btn"
+            onclick="addToCart(this)"
+          >
+            Reserve personal session
+          </button>
+        </article>
+
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_TeeShirt.png"
+            alt="A T-Shirt featuring the ABC Fitness studio logo!"
+          />
+          <p>
+            Show off your commitment to your health journey by sporting one of
+            our ABC Fitness Studio T-Shirts!
+          </p>
+          <div class="multi-users">
+            <div class="qty-controls">
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, -1)"
+                aria-label="Decrease quantity"
+              >
+                -
+              </button>
+              <span class="qty-val">1</span>
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, 1)"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="btn btn-primary add-to-cart-btn"
+              onclick="addToCart(this)"
+            >
+              Add people to session
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_WaterBottle.png"
+            alt="A black water bottle featuring the ABC Fitness logo"
+          />
+          <p>
+            Stay hydrated using the ABC Fitness Studio water bottle to keep you
+            hydrated for another set.
+          </p>
+          <div class="multi-users">
+            <div class="qty-controls">
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, -1)"
+                aria-label="Decrease quantity"
+              >
+                -
+              </button>
+              <span class="qty-val">1</span>
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, 1)"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="btn btn-primary add-to-cart-btn"
+              onclick="addToCart(this)"
+            >
+              Add people to session
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_YogaMat.png"
+            alt="A black yoga mat featuring the ABC Fitness logo"
+          />
+          <p>
+            Lay down a soft foundation as you strech and relax using one our
+            featured ABC Fitness Studio yoga mats
+          </p>
+          <div class="multi-users">
+            <div class="qty-controls">
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, -1)"
+                aria-label="Decrease quantity"
+              >
+                -
+              </button>
+              <span class="qty-val">1</span>
+              <button
+                class="qty-btn"
+                onclick="adjustQty(this, 1)"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="btn btn-primary add-to-cart-btn"
+              onclick="addToCart(this)"
+            >
+              Add people to session
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <section class="message" style="margin-top: 4rem; border: none">
+        <h2>Contact sales</h2>
+        <a href="aboutUs.html" class="btn btn-primary" style="margin-top: 1rem"
+          >Get in touch</a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>ABC Fitness</h3>
+          <p>Get updates as they come!</p>
+        </div>
+        <form class="subscribe-form">
+          <input
+            type="email"
+            placeholder="Your Email"
+            aria-label="Email Address"
+            required
+          />
+          <button type="submit" class="btn btn-secondary">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ABC Fitness. All Rights Reserved.</p>
+        <ul>
+          <p><a href="#">Privacy</a></p>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

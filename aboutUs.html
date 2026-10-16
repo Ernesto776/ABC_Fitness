@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC Fitness Studio | About Us</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation menu"
+      >
+        <svg
+          class="hamburger-icon"
+          viewBox="0 0 100 80"
+          width="30"
+          height="30"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect
+            class="line top"
+            width="100"
+            height="12"
+            rx="6"
+            fill="currentColor"
+          ></rect>
+          <rect
+            class="line middle"
+            y="30"
+            width="100"
+            height="12"
+            rx="6"
+            fill="currentColor"
+          ></rect>
+          <rect
+            class="line bottom"
+            y="60"
+            width="100"
+            height="12"
+            rx="6"
+            fill="currentColor"
+          ></rect>
+        </svg>
+      </button>
+
+      <nav id="primary-navigation" aria-label="Main Navigation">
+        <div class="logo-n-name">
+          <img
+            src="\ABC Fitness Studio Gallery Images\Client2_LogoPalette2_20458E.png"
+            class="logo"
+            alt="The ABC Fitness studio logo"
+          />
+          <h1><a href="index.html">ABC Fitness Studio</a></h1>
+        </div>
+        <ul>
+          <li><a href="index.html">Pricing</a></li>
+          <li><a href="aboutUs.html" class="active">About Us</a></li>
+          <li><a href="ourImpact.html">Our Impact</a></li>
+          <li><a href="gallery-shop.html">Shop</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="gallery-shop.html" class="btn btn-primary"
+          >Reserve a Session</a
+        >
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="grid-2" style="margin-bottom: 3rem">
+        <div>
+          <h1>About us</h1>
+          <p style="margin: 1rem 0">
+            We are dedicated to supporting your personal physical wellness
+            through accessible training, modern facilities, and an encouraging
+            health community.
+          </p>
+          <a href="ourImpact.html" class="btn btn-primary">Learn More</a>
+        </div>
+        <img
+          src="\ABC Fitness Studio Gallery Images\about_us_pic.webp"
+          alt="The interior of the fitness studio"
+        />
+      </section>
+
+      <section class="card" style="margin-bottom: 3rem">
+        <h2>Hours of operation:</h2>
+        <ul style="list-style: none; margin-top: 1rem">
+          <li><strong>Monday–Friday:</strong> 6:00 a.m. to 8:00 p.m.</li>
+          <li><strong>Saturday:</strong> 8:00 a.m. to 6:00 p.m.</li>
+          <li><strong>Sunday:</strong> Closed</li>
+        </ul>
+      </section>
+
+      <section class="card" style="margin-bottom: 3rem">
+        <h2>Have a custom order? Let us know!</h2>
+        <form style="margin-top: 1rem">
+          <div class="form-group">
+            <label for="custom-order">Order Request Details</label>
+            <textarea
+              id="custom-order"
+              rows="4"
+              placeholder="Describe your custom training program or merchandise request..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Want to give feedback? Let us know!</h2>
+        <form id="feedback-form" style="margin-top: 1rem">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="first-name">First name:</label>
+              <input type="text" id="first-name" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name:</label>
+              <input type="text" id="last-name" required />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="phone">Phone number:</label>
+              <input type="tel" id="phone" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Feedback</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>ABC Fitness</h3>
+          <p>Get updates as they come!</p>
+        </div>
+        <form class="subscribe-form">
+          <input
+            type="email"
+            placeholder="Your Email"
+            aria-label="Email Address"
+            required
+          />
+          <button type="submit" class="btn btn-secondary">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ABC Fitness. All Rights Reserved.</p>
+        <ul>
+          <p><a href="#">Privacy</a></p>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
