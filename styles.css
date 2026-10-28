@@ -305,6 +305,7 @@ textarea:focus {
 .multi-users {
   display: flex;
   justify-content: center;
+  gap: 0rem 1rem;
 }
 
 .card img,
