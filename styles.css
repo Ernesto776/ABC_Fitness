@@ -7,7 +7,7 @@
   --purple-accent: #634e99;
   --gray-light: #d3d3d3;
   --bg-light: #f8f9fa;
-  --text-dark: #1a1a1a;
+  --text-dark: #00231c;
   --white: #ffffff;
 
   /* Font Families */
@@ -132,9 +132,7 @@ nav a.active {
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-normal);
+  font: var(--type-body);
   line-height: 1.6;
   color: var(--text-dark);
   background-color: var(--bg-light);
@@ -276,7 +274,7 @@ textarea:focus {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 0rem 2rem;
   align-items: center;
 }
 
@@ -321,7 +319,7 @@ textarea:focus {
 
 /* Forms */
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0rem;
 }
 
 .form-group label {
