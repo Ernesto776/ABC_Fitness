@@ -293,10 +293,29 @@ textarea:focus {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid var(--gray-light);
+}
+
+.card > .btn,
+.card > .multi-users {
+  margin-top: auto;
+}
+
+.card.PnS h3 {
+  flex-grow: 1;
+}
+
+.card.PnS img {
+  margin-bottom: 1rem;
+}
+
+.multi-users .qty-controls {
+  margin: 0;
 }
 
 .multi-users,
