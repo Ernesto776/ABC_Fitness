@@ -255,6 +255,7 @@ textarea:focus {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 2rem;
   padding: 1rem 1rem;
 }
 
@@ -302,10 +303,28 @@ textarea:focus {
   border: 1px solid var(--gray-light);
 }
 
-.multi-users {
+.multi-users,
+.card .add-to-cart-btn {
   display: flex;
   justify-content: center;
   gap: 0rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.multi-users .qty-btn,
+.multi-users .add-to-cart-btn {
+  height: 32px;
+}
+
+.multi-users .add-to-cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.2rem;
 }
 
 .card img,
@@ -314,8 +333,13 @@ textarea:focus {
   height: auto;
   display: block;
   border-radius: 4px;
-  margin-bottom: 1rem;
   object-fit: contain;
+}
+
+.card p,
+.grid-2 h1,
+.card .pns h3 {
+  margin: 1rem 0;
 }
 
 /* Forms */
@@ -359,7 +383,6 @@ footer {
   background-color: var(--navy-dark);
   color: var(--white);
   padding: 1rem 5% 1rem;
-  margin-top: 1rem;
 }
 
 .footer-content,
