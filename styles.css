@@ -286,14 +286,10 @@ textarea:focus {
 }
 
 .grid-3 {
-  margin-top: 1.5rem;
-}
-
-.grid-4,
-.grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .card {
