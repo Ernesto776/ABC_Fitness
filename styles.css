@@ -400,6 +400,7 @@ textarea:focus {
   border: none;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 /* Header Cart SVG Button */
