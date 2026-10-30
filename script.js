@@ -29,6 +29,21 @@ const ITEM_NAME_MAP = {
     'Client2_YogaMat.png': 'ABC Fitness Studio Yoga Mat'
 };
 
+const buttonAlerts = [
+    {
+        selector: '#subscribe',
+        message: 'Thank you for subscribing.'
+    },
+    {
+        selector: '#requestBtn',
+        message: 'We will reach back to you on your request.'
+    },
+    {
+        selector: '#feedbackBtn',
+        message: 'Thank you for your message.'
+    }
+];
+
 let cartItems = loadCartFromStorage();
 
 // Load saved cart items from sessionStorage if available
@@ -401,7 +416,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-const subscribeBtn = document.querySelector("#subscribe");
-subscribeBtn.addEventListener('click', () => {
-    alert('test');
+buttonAlerts.forEach(({ selector, message }) => {
+    const btn = document.querySelector(selector);
+    if (btn) {
+        btn.addEventListener('click', (event) => {
+            event.preventDefault();
+            alert(message);
+        });
+    }
 });
