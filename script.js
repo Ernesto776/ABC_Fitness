@@ -238,7 +238,7 @@ function addToCart(button) {
     updateCartCountDisplay();
     renderCartItems();
 
-    alert('Item added.');
+    alert('Item added to the cart.');
 }
 
 // Render the current cart items inside the View Cart modal window
@@ -345,6 +345,7 @@ function clearCart() {
     syncHeaderCartButton();
     updateCartCountDisplay();
     renderCartItems();
+    alert('Cart cleared.');
 }
 
 // Process the current order, alert the user, and clear the cart
@@ -398,4 +399,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+});
+
+const subscribeBtn = document.querySelector("#subscribe");
+subscribeBtn.addEventListener('click', () => {
+    alert('test');
 });
