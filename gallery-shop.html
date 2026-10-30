@@ -95,6 +95,7 @@
         </button>
       </div>
     </header>
+
     <main class="container">
       <h1 style="text-align: center; margin-bottom: 2rem">
         A display of our services
@@ -102,6 +103,7 @@
 
       <div class="gallery-grid">
         <article class="card">
+          <h2>Group Kickboxing</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_GroupKickboxing.png"
             alt="A woman wearing boxing gloves is in a fighting stance, preparing herself, looking off camera."
@@ -139,6 +141,7 @@
         </article>
 
         <article class="card">
+          <h2>Group Pilates</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_GroupPilates.png"
             alt="Three women are participating in group pilates. The women are on their yoga mats looking forward with both arms and right knees on the mat, their left leg is raised behind them in the air."
@@ -176,6 +179,7 @@
         </article>
 
         <article class="card">
+          <h2>Group Yoga</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_GroupYoga.png"
             alt="A group of people are sitting on their yoga mats with their arms over their heads and hands together."
@@ -212,6 +216,7 @@
         </article>
 
         <article class="card">
+          <h2>Individual Kickboxing</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_IndividualKickboxing.png"
             alt="The personal trainer is holding up the orange and black punching bag while the student throws a right sideways knee."
@@ -230,6 +235,7 @@
         </article>
 
         <article class="card">
+          <h2>Individual Pilates</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_IndividualPilates.png"
             alt="A woman is on her stomach doing trunk lifts with both of her arms extended out 90 degrees in front of her"
@@ -248,6 +254,7 @@
         </article>
 
         <article class="card">
+          <h2>Individual Yoga</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_IndividualYoga.png"
             alt="A woman is striking a downward dog pose on a cyan yoga mat!"
@@ -266,6 +273,7 @@
         </article>
 
         <article class="card">
+          <h2>ABC Fitness Studio T-Shirt</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_TeeShirt.png"
             alt="A T-Shirt featuring the ABC Fitness studio logo!"
@@ -302,6 +310,7 @@
         </article>
 
         <article class="card">
+          <h2>ABC Fitness Studio Water Bottle</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_WaterBottle.png"
             alt="A black water bottle featuring the ABC Fitness logo"
@@ -338,6 +347,7 @@
         </article>
 
         <article class="card">
+          <h2> ABC Fitness Studio Yoga Mat</h2>
           <img
             src="\ABC Fitness Studio Gallery Images\Client2_YogaMat.png"
             alt="A black yoga mat featuring the ABC Fitness logo"
@@ -390,38 +400,38 @@
         aria-labelledby="cart-modal-title"
         aria-hidden="true"
     >
-        <div class="modal-content card">
-            <div class="modal-header">
-                <h2 id="cart-modal-title">Your Shopping Cart</h2>
-                <button
-                    type="button"
-                    class="modal-close"
-                    onclick="closeCartModal()"
-                    aria-label="Close cart modal"
-                >
-                    &times;
-                </button>
-            </div>
-            <div id="cart-items-container" class="modal-body">
-                <p class="empty-cart-msg">Your cart is empty.</p>
-            </div>
-            <div class="modal-footer">
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    onclick="clearCart()"
-                >
-                    Clear Cart
-                </button>
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    onclick="processOrder()"
-                >
-                    Process Order
-                </button>
-            </div>
+      <div class="modal-content card">
+        <div class="modal-header">
+          <h2 id="cart-modal-title">Your Shopping Cart</h2>
+          <button
+            type="button"
+            class="modal-close"
+            onclick="closeCartModal()"
+            aria-label="Close cart modal"
+            >
+              &times;
+          </button>
         </div>
+        <div id="cart-items-container" class="modal-body">
+          <p class="empty-cart-msg">Your cart is empty.</p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="clearCart()"
+          >
+            Clear Cart
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="processOrder()"
+          >
+            Process Order
+          </button>
+        </div>
+      </div>
     </div>
 
     <footer>

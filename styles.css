@@ -357,6 +357,15 @@ textarea:focus {
   margin: 1rem 0;
 }
 
+.card h2 {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.gallery-grid .card h2 {
+  margin-bottom: 1rem;
+}
+
 /* Forms */
 .form-group {
   margin-bottom: 0rem;
