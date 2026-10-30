@@ -86,7 +86,7 @@ function updateCartCountDisplay() {
     }
 }
 
-// Replace Reserve a Session button with SVG cart when the cart has over 0 products
+// Replace Reserve a Session button with SVG cart when cart count > 0
 function syncHeaderCartButton() {
     const navActions = document.querySelector('.nav-actions');
     if (!navActions) {
@@ -354,20 +354,27 @@ function closeCartModal() {
 }
 
 // Clear all items currently in the cart
-function clearCart() {
+function clearCart(showAlert = true) {
     cartItems = [];
     saveCartToStorage();
     syncHeaderCartButton();
     updateCartCountDisplay();
     renderCartItems();
-    alert('Cart cleared.');
+    if (showAlert) {
+        alert('Cart cleared.');
+    }
 }
 
 // Process the current order, alert the user, and clear the cart
 function processOrder() {
-    alert('Thank you for your order.');
-    clearCart();
-    closeCartModal();
+    totalCount = getTotalCartCount();
+    if (totalCount > 0) {
+        alert('Thank you for your order.');
+        clearCart(false);
+        closeCartModal();
+    } else {
+        alert('Unable to process empty cart.');
+    }
 }
 
 // Initialize navigation and modal event listeners when DOM is ready
