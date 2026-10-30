@@ -29,17 +29,17 @@ const ITEM_NAME_MAP = {
     'Client2_YogaMat.png': 'ABC Fitness Studio Yoga Mat'
 };
 
-const buttonAlerts = [
+const formAlerts = [
     {
-        selector: '#subscribe',
+        selector: '.subscribe-form',
         message: 'Thank you for subscribing.'
     },
     {
-        selector: '#requestBtn',
+        selector: '#custom-order-form',
         message: 'We will reach back to you on your request.'
     },
     {
-        selector: '#feedbackBtn',
+        selector: '#feedback-form',
         message: 'Thank you for your message.'
     }
 ];
@@ -416,12 +416,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-buttonAlerts.forEach(({ selector, message }) => {
-    const btn = document.querySelector(selector);
-    if (btn) {
-        btn.addEventListener('click', (event) => {
+formAlerts.forEach(({ selector, message }) => {
+    document.querySelectorAll(selector).forEach((form) => {
+        form.addEventListener('submit', (event) => {
             event.preventDefault();
             alert(message);
+            form.reset();
         });
-    }
+    });
 });
