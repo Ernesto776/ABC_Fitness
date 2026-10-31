@@ -48,7 +48,7 @@ function saveCartToStorage() {
     try {
         sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
     } catch {
-        // Ignores storage errors if in a restricted environment
+        
     }
 }
 
