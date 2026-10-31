@@ -1,4 +1,6 @@
 const CART_STORAGE_KEY = 'abcFitnessCart';
+const CUSTOMER_INFO_STORAGE_KEY = 'abcFitnessCustomerInfo';
+const CUSTOM_ORDER_STORAGE_KEY = 'abcFitnessCustomOrder';
 
 const CART_SVG_MARKUP =
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" ' +
@@ -28,21 +30,6 @@ const ITEM_NAME_MAP = {
     'Client2_WaterBottle.png': 'ABC Fitness Studio Water Bottle',
     'Client2_YogaMat.png': 'ABC Fitness Studio Yoga Mat'
 };
-
-const formAlerts = [
-    {
-        selector: '.subscribe-form',
-        message: 'Thank you for subscribing.'
-    },
-    {
-        selector: '#custom-order-form',
-        message: 'We will reach back to you on your request.'
-    },
-    {
-        selector: '#feedback-form',
-        message: 'Thank you for your message.'
-    }
-];
 
 let cartItems = loadCartFromStorage();
 
@@ -423,11 +410,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-formAlerts.forEach(({ selector, message }) => {
-    document.querySelectorAll(selector).forEach((form) => {
+// Save customer feedback/contact or custom order request information to localStorage
+function saveCustomerInfo(key, data) {
+    try {
+        localStorage.setItem(key, JSON.stringify(data));
+    } catch {
+
+    }
+}
+
+// Form submission and localStorage persistence handler
+document.addEventListener('DOMContentLoaded', () => {
+    const customOrderForm = document.getElementById('custom-order-form');
+    if (customOrderForm) {
+        customOrderForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const detailsEl = document.getElementById('custom-order');
+            const orderData = {
+                orderDetails: detailsEl ? detailsEl.value.trim() : '',
+                submittedAt: new Date().toISOString()
+            };
+            saveCustomerInfo(CUSTOM_ORDER_STORAGE_KEY, orderData);
+            alert('We will reach back to you on your request.');
+            customOrderForm.reset();
+        });
+    }
+
+    const feedbackForm = document.getElementById('feedback-form');
+    if (feedbackForm) {
+        feedbackForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const getVal = (id) => {
+                const el = document.getElementById(id);
+                return el ? el.value.trim() : '';
+            };
+            const customerData = {
+                firstName: getVal('first-name'),
+                lastName: getVal('last-name'),
+                phone: getVal('phone'),
+                email: getVal('email'),
+                feedback: getVal('feedback'),
+                submittedAt: new Date().toISOString()
+            };
+            saveCustomerInfo(CUSTOMER_INFO_STORAGE_KEY, customerData);
+            alert('Thank you for your message.');
+            feedbackForm.reset();
+        });
+    }
+
+    document.querySelectorAll('.subscribe-form').forEach((form) => {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            alert(message);
+            alert('Thank you for subscribing.');
             form.reset();
         });
     });
